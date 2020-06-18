@@ -1,0 +1,330 @@
+body {
+  background-image: url(../img/fondo/bg.jpg) !important;
+  background-size: 100% 100%;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+
+  font-family: "Permanent Marker", cursive !important;
+}
+ul{
+    list-style: none;
+}
+.navbar {
+  position: initial;
+  box-shadow: 1px 1px 3px red;
+  opacity: 1;
+}
+
+#navbar-desktop {
+  box-shadow: 1px 1px 3px red;
+  opacity: 1;
+  top: -14px;
+}
+
+.logo {
+  width: 10%;
+  height: 10%;
+  border-radius: 30%;
+}
+
+.navigation-wrapper {
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    backdrop-filter: blur(none);
+  }
+  .navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+  }
+  .pad {
+    padding-top: 66px;
+  }
+  .navigation-button {
+    will-change: transform;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 9999;
+    top: 15px;
+    right: 10px;
+    background: transparent;
+    cursor: pointer;
+  }
+  .navigation-button .fa {
+    border: 2px solid red;
+    border-radius: 30px;
+    padding: 10px;
+    color: red;
+  }
+  .navigation-menu ul li {
+    z-index: 999;
+    list-style: none;
+    font-family: impact;
+    font-weight: 300;
+    color: hsl(0, 0%, 70%);
+  }
+  .navigation-menu {
+    content: "";
+    position: fixed;
+    top: 65px;
+    right: -50;
+    width: 70%;
+    background: #252729;
+    height: 60%;
+    transform: skewX(0deg) translate(100%, 0);
+    transform-origin: top right;
+    transition: all 0.2s ease-in;
+    z-index: -1;
+  }
+  .navigation-menu ul {
+    transform: skewX(-8deg);
+    transform-origin: top left;
+    position: fixed;
+    right: -60px;
+    top: 5px;
+    width: 400px;
+    text-align: center;
+  }
+  .navigation-menu ul li a {
+    border: none;
+    color: red;
+    text-decoration: none;
+  }
+  .navigation-menu.active {
+    transform: skewX(8deg) translate(0, 0);
+    right: 0;
+  }
+  .navigation-menu li {
+    opacity: 0;
+    transform: translate(0, 10px);
+    transition: all 0s ease-in 0.3s;
+  }
+  .navigation-menu.active li {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.2s ease-in 0s;
+  }
+  .navigation-button.active .fa {
+    display: none;
+  }
+  .navigation-button .x {
+    display: none;
+    border: 2px solid red;
+    border-radius: 100px;
+    padding: 9px;
+    color: red;
+  }
+  .navigation-button.active .x {
+    will-change: transform;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    flex-wrap: wrap;
+    z-index: 1;
+    top: 1px;
+    right: 1px;
+    background: transparent;
+    cursor: pointer;
+  }
+  .navigation-menu.navigation-menu.active ul {
+    position: absolute;
+    z-index: 10;
+  }
+  .navigation-menu.active li:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .navigation-menu.active li:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .navigation-menu.active li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  .navigation-menu.active li:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+  .navigation-menu.active li:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+  .navigation-menu.active li:nth-child(6) {
+    transition-delay: 0.6s;
+  }
+  #navbar-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    backdrop-filter: blur(none);
+  }
+  .navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+  }
+  .pad {
+    padding-top: 66px;
+  }
+  .navigation-menu {
+    content: "";
+    position: fixed;
+    top: 67px;
+    right: -70;
+    width: 40%;
+    background: #252729;
+    height: 37%;
+    transform: skewX(0deg) translate(100%, 0);
+    transform-origin: top right;
+    transition: all 0.2s ease-in;
+  }
+  .navigation-button {
+    will-change: transform;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    flex-wrap: wrap;
+    z-index: 9999;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    cursor: pointer;
+  }
+  .navigation-button.active .fa {
+    display: none;
+  }
+  .navigation-button .x {
+    display: none;
+    border: 2px solid red;
+    border-radius: 100px;
+    padding: 9px;
+    color: red;
+  }
+  .navigation-button.active .x {
+    will-change: transform;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    flex-wrap: wrap;
+    z-index: 1;
+    top: 1px;
+    right: 1px;
+    background: transparent;
+    cursor: pointer;
+  }
+  .navigation-button .fa {
+    border: 2px solid red;
+    border-radius: 30px;
+    padding: 10px;
+    color: red;
+  }
+  .navigation-menu ul {
+    transform: skewX(-8deg);
+    transform-origin: top left;
+    position: fixed;
+    right: -50px;
+    top: 0px;
+    width: 400px;
+    text-align: center;
+  }
+  .navigation-menu ul li {
+    position: relative;
+    z-index: 999;
+    font-size: 32px;
+    color: hsl(0, 0%, 10%);
+    line-height: 64px;
+  }
+  .navigation-menu ul li a {
+    border: none;
+    color: red;
+    text-decoration: none;
+  }
+  .navigation-menu.active {
+    transform: skewX(8deg) translate(0, 0);
+    right: 0;
+  }
+  .navigation-menu li {
+    opacity: 0;
+    transform: translate(0, 10px);
+    transition: all 0s ease-in 0.3s;
+  }
+  .navigation-menu.active li {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.2s ease-in 0s;
+  }
+  .navigation-menu.active li:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .navigation-menu.active li:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .navigation-menu.active li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  .navigation-menu.active li:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+  .navigation-menu.active li:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+  .navigation-menu.active li:nth-child(6) {
+    transition-delay: 0.6s;
+  }
+  #navbar-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #navbar-desktop {
+    top: 2px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+  }
+  
+  .pad {
+    padding-top: 70px;
+  }
+  body {
+    backdrop-filter: blur(3px);
+  }
+  .navigation-button {
+    will-change: transform;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 1;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    cursor: pointer;
+  }
+  .navigation-button .fa {
+    border-radius: 30px;
+    padding: 10px;
+  }
+  .navigation-menu ul {
+    transform: skewX(-8deg);
+    transform-origin: top left;
+    position: fixed;
+    right: -60px;
+    top: 0px;
+    width: 350px;
+    text-align: center;
+    display: none;
+  }
+  #navbar {
+    display: none;
+  }
+}
